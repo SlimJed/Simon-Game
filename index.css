@@ -1,0 +1,106 @@
+.gameStepNo{
+  border-radius:16px;
+  border:2px solid;
+  display:inline-block;
+  cursor:pointer;
+  padding:14px 48px;
+  text-decoration:none;
+  font-weight: bold;
+}
+.gameScore{
+  border-radius:16px;
+  border:2px solid;
+  display:inline-block;
+  cursor:pointer;
+  padding:14px 48px;
+  text-decoration:none;
+  font-weight: bold;
+}
+.boxes {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+.box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.box1 {
+  top: 0;
+  left: 0;
+  background-color: #FF3000;
+  box-shadow: 0 0 0 1px #FF3000 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #FF3000, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 100% 0 0 0;
+}
+.box1:hover, .box1:focus{
+  background-color: #ff451a;
+    box-shadow: 0 0 0 1px #FF3000 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #e62b00, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);
+}
+.box1:active, .box1-activated {
+    box-shadow: 0 0 0 1px #e62b00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+  background-color: #ff8366;
+}
+
+
+.box2 {
+  top: 0;
+  right: 0;
+  background-color: #088500;
+    box-shadow: 0 0 0 1px #088500 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #088500, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+
+  border-radius: 0 100% 0 0;
+}
+.box2:hover, .box2:focus {
+    background-color: #0a9f00;
+    box-shadow: 0 0 0 1px #088500 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #066c00, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);
+  }
+  .box2:active, .box2-activated {
+    box-shadow: 0 0 0 1px #066c00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #0eeb00;
+  }
+.box3 {
+  bottom: 0;
+  left: 0;
+  background-color: #E05700;
+    box-shadow: 0 0 0 1px #E05700 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #E05700, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+
+  border-radius: 0 0 0 100%;
+}
+.box3:hover, .box3:focus {
+    background-color: #fa6100;
+    box-shadow: 0 0 0 1px #E05700 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #c74d00, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);
+}
+  .box3:active, .box3-activated {
+    box-shadow: 0 0 0 1px #c74d00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #ff8e47;
+}
+
+.box4 {
+  bottom: 0;
+  right: 0;
+  background-color: #3A00FF;
+  box-shadow: 0 0 0 1px #3A00FF inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #3A00FF, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 100% 0;
+}
+.box4:hover, .box4:focus {
+    background-color: #4e1aff;
+    box-shadow: 0 0 0 1px #3A00FF inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #3400e6, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);
+}
+  .box4:active, .box4-activated {
+    box-shadow: 0 0 0 1px #3400e6 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #8966ff;
+}
+.cutout {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
+  pointer-events: none;
+}

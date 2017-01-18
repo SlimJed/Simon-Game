@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon Game</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<h1>Welcome to Simon says game</h1>
+				<h3 class="gameHeading">Play Game</h3>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="boxes">
+				<div class="box box1" id="box1"></div>
+				<div class="box box2" id="box2"></div>
+				<div class="box box3" id="box3"></div>
+				<div class="box box4" id="box4"></div>
+				<div class="cutout"></div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="gameControls">
+				<div class="col-md-3 text-center">
+					<div class="gameStepNo">Steps:<span id="gameStepNo">0</span></div>
+				</div>
+				<div class="col-md-3 text-center">
+					<button class="btn btn-primary btn-lg btnStart center">Start Game</button>
+				</div>
+				<div class="col-md-3 text-center">
+					<button class="btn btn-primary btn-lg btnReset center">Reset Game</button>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="gameScore"> Score: <span id="gameScores">0</span></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hidden">
+			<audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" id="sound-1"></audio>
+			<audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" id="sound-2"></audio>
+			<audio src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" id="sound-3"></audio>
+			<audio src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" id="sound-4"></audio>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
