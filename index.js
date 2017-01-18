@@ -1,22 +1,22 @@
 $(document).ready(function () {
-	let arr = [], 
-	userArr = [], 
-	computerArr = [], 
-	steps = 1, 
-	tileIds = [1,2,3,4], 
-	interval, 
-	jed,
-	counter = 0, 
-	random,
-	kount = 0, 
-	mode = 0, score = 0;
+	let steps = 1, 
+		tileIds = [1,2,3,4], 
+		interval, jed,
+		counter = 0, 
+		random,
+		count = 0, 
+		mode = 0, score = 0,
+		Temparr = [], 
+		userArr = [], 
+		computerArr = []; 
 	
 	function endGame () 
 	{
 		clearInterval(interval);
 		deactivate();
-		$(".gameHeading").html("Simon Game");
-		arr = []; userArr = []; computerArr = []; steps = 1; counter = 0; kount = 0; mode = 0; score = 0;
+		$(".gameHeading").html("Play Game");
+		Temparr = []; userArr = []; computerArr = []; steps = 1; counter = 0; 
+		count = 0; mode = 0; score = 0;
 	}
 
 	function deactivate () 
@@ -49,15 +49,15 @@ $(document).ready(function () {
 		$("#gameStepNo").html(steps);
 		$("#gameScores").html(score);
 		mode = 0;
-		arr = computerArr;
+		Temparr = computerArr;
 		computerArr = [];
 		userArr = [];
 		let jed = function () {
-			kount = 0;
+			count = 0;
 			deactivate();
 			random = Math.floor(Math.random() * tileIds.length);
-			if (arr[counter] !== undefined) {
-				random = arr[counter];
+			if (Temparr[counter] !== undefined) {
+				random = Temparr[counter];
 			}
 			setTimeout(triggerClick, 500);
 			setTimeout(activate, 500);
@@ -66,7 +66,7 @@ $(document).ready(function () {
 			if (counter == steps) {
 				clearInterval(interval);
 				setTimeout(deactivate, 750);
-				kount = 0;
+				count = 0;
 				setTimeout(setMode, 1000);
 			}
 		};
@@ -87,12 +87,12 @@ $(document).ready(function () {
 
 		else if (mode == 1) {
 			userArr.push(idNum);
-			if (computerArr[kount] !== userArr[kount]) {
+			if (computerArr[count] !== userArr[count]) {
 				alert('you lose!');
 				endGame();
 			}
-			kount++;
-			if (kount == computerArr.length) {
+			count++;
+			if (count == computerArr.length) {
 				mode = 0;
 				counter = 0;
 				steps++;
